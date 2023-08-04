@@ -1,0 +1,58 @@
+{
+  "name": "@zhangqingcq/view-ui-plus-resolver",
+  "version": "0.0.1",
+  "description": "Resolver for View UI Plus; Work with unplugin-vue-components.",
+  "publishConfig": {
+    "access": "public"
+  },
+  "type": "module",
+  "files": [
+    "lib",
+    "src"
+  ],
+  "main": "./lib/index.js",
+  "module": "./lib/index.mjs",
+  "types": "./lib/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./lib/index.mjs",
+      "require": "./lib/index.cjs",
+      "types": "./lib/index.d.ts"
+    },
+    "./lib/*.js": "./lib/*.js",
+    "./*": "./*"
+  },
+  "scripts": {
+    "lib": "rollup --config rollup.config.js",
+    "types": "tsc --declaration --emitDeclarationOnly -p tsconfig.app.json"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RickyHeaven/view-ui-plus-resolver.git"
+  },
+  "keywords": [
+    "vue",
+    "vite",
+    "typescript",
+    "view",
+    "view-ui-plus",
+    "unplugin-vue-components",
+    "resolver",
+    "ricky",
+    "zhangqingcq"
+  ],
+  "author": "RickyHeaven",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/RickyHeaven/view-ui-plus-resolver/issues"
+  },
+  "homepage": "https://github.com/RickyHeaven/view-ui-plus-resolver#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "@tsconfig/node18": "^2.0.1",
+    "@types/node": "^18.16.17",
+    "rollup": "^3.27.0",
+    "rollup-plugin-typescript2": "^0.35.0",
+    "typescript": "^5.1.6"
+  }
+}

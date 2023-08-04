@@ -1,0 +1,24 @@
+{
+  "extends": "./base.json",
+  "include": [
+    "env.d.ts",
+    "./src/**/*.ts",
+    "./src/**/*",
+  ],
+  "exclude": [],
+  "compilerOptions": {
+    "allowJs": true,
+    "baseUrl": ".",
+    "composite": true,
+    "moduleResolution": "node",
+    "noImplicitAny": true,
+    "strictNullChecks": true,
+    "rootDir": "./src",
+    "declarationDir": "./lib",
+    "paths": {
+      "@/*": [
+        "./src/*"
+      ]
+    }
+  }
+}
